@@ -1,0 +1,18 @@
+<%- include("partials/header.ejs"); -%>
+
+
+
+
+<h4 style ="margin-bottom: 4rem">The latest tech news about the world's best (and sometimes worst) hardware, apps, and much more.
+  From top companies like Google and Apple to tiny startups vying for your attention,
+  Tech News has the latest in what matters in technology daily.</h4>
+
+<% posts.forEach(function(post){ %>
+
+  <h1><%= post.title %></h1>
+  <p> <%- post.body.substring(0, 100) + "... " %> <a href="/posts/<%=post.title%>">Read More</a></p>
+
+<% }); %>
+
+
+<%- include("partials/footer.ejs"); -%>
